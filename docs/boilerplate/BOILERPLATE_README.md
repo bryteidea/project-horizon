@@ -1,62 +1,68 @@
-# Boilerplate Templates
+# Boilerplate Templates – PixelMyNixel
 
-This directory contains standardized templates for project documentation and related files. These templates promote consistency and make it easier to create new documentation by providing reusable structures.
+Goal: Provide drop‑in markdown (and text) templates so every repo across the PixelMyNixel org shares the same look‑and‑feel.
 
-## Available Templates
+## 📦 Template Index
 
-- **DIRECTORY_STRUCTURE_TEMPLATE.md**: Template for creating directory structure documentation
-- **TICKET_TEMPLATE.md**: Template for creating new tickets
-- **README_TEMPLATE.md**: Template for creating README files for new modules or directories
-- **DIRECTORY_README_TEMPLATE.md**: Template for creating README files for directories
-- **VERSION_TEMPLATE**: Template for the VERSION file
-- **CHANGELOG_TEMPLATE.md**: Template for creating or updating the CHANGELOG
-- **CONTRIBUTING_TEMPLATE.md**: Template for creating CONTRIBUTING.md with versioning policy
+| File | Purpose |
+|------|---------|
+| DIRECTORY_STRUCTURE_TEMPLATE.md | Starter for documenting a repo's folder layout. |
+| TICKET_TEMPLATE.md | Issue ticket skeleton (MP-XXX, SS-YYY, etc.). |
+| README_TEMPLATE.md | Module or feature README boilerplate. |
+| DIRECTORY_README_TEMPLATE.md | README for individual directories. |
+| VERSION_TEMPLATE | Initial VERSION file (SemVer). |
+| CHANGELOG_TEMPLATE.md | First CHANGELOG entry (Unreleased heading + table). |
+| CONTRIBUTING_TEMPLATE.md | Baseline Contributing guide with versioning policy. |
 
-## Usage Guidelines
+## 🛠 How to Use
 
-### Ticket Templates
-- Replace AV-XXX with the correct ticket number
-- Choose one option from Type and Priority sections
-- Fill in all sections with relevant information
-- Delete any sections that aren't relevant
-
-### Documentation Templates
-- Follow the established format
-- Always include "Made with love by BitGeek Software" at the end
-- Update version numbers when applicable
-
-### Changelog Templates
-- Follow semantic versioning for new entries
-- Include ticket numbers for all changes
-- Group related changes under appropriate headings
-- Provide sufficient detail for each change
-
-### Directory README Templates
-- Replace "Directory Name" with the actual directory name
-- Replace "DIRECTORY_PURPOSE" with the purpose of the directory
-- List all subdirectories with descriptions
-- Customize the purpose section to match the directory's function
-
-### Contributing Template
-- Update "Project Name" with the actual project name
-- Customize code style guidelines if needed
-- Ensure versioning policy matches project requirements
-- Add project-specific guidelines if necessary
-
-## Usage Examples
+### 1. Create a ticket
 
 ```
-# Example: Creating a new ticket
-cp docs/boilerplate/TICKET_TEMPLATE.md tickets/AV-XXX_new_feature_name.md
+cp docs/boilerplate/TICKET_TEMPLATE.md tickets/MP-123_add_ocr_module.md
+```
 
-# Example: Creating a README for a new directory
-cp docs/boilerplate/README_TEMPLATE.md new_directory/README.md
+Replace MP-123 with your project's ticket ID.
 
-# Example: Creating a README for a subdirectory
-cp docs/boilerplate/DIRECTORY_README_TEMPLATE.md new_directory/README.md
+### 2. Start a new directory
 
-# Example: Creating a CONTRIBUTING.md file
+```
+mkdir app/services/image_ocr
+cp docs/boilerplate/DIRECTORY_README_TEMPLATE.md app/services/image_ocr/README.md
+```
+
+Edit placeholders (<DIRECTORY_NAME>, <PURPOSE>).
+
+### 3. Initialise docs for a fresh repo
+
+```
+cp docs/boilerplate/README_TEMPLATE.md README.md
+cp docs/boilerplate/DIRECTORY_STRUCTURE_TEMPLATE.md docs/DIRECTORY_STRUCTURE.md
 cp docs/boilerplate/CONTRIBUTING_TEMPLATE.md CONTRIBUTING.md
 ```
 
-Made with love by BitGeek Software 
+Update project name, badges, and links.
+
+### 4. Tagging a release
+
+```
+cp docs/boilerplate/CHANGELOG_TEMPLATE.md CHANGELOG.md   # Only on first init
+cp docs/boilerplate/VERSION_TEMPLATE VERSION             # Contains 0.1.0
+```
+
+Edit the "Unreleased" section; bump version per SemVer.
+
+## ✍️ Editing Guidelines
+
+- Replace MP-XXX with your ticket code (or SS-XXX, PX-XXX).
+- Keep heading levels unchanged unless documented.
+- Wrap lines at 120 chars for diff‑friendly commits.
+- End every file (except VERSION_TEMPLATE) with a newline.
+
+## 🤝 Contributing to the templates
+
+- Open an issue titled "Template change: " explaining the rationale.
+- Submit a PR to docs/boilerplate/ with clear before/after diff.
+- One maintainer approval + CI pass required to merge.
+
+Made with pride by PixelMyNixel – 2025 
