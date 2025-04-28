@@ -49,6 +49,7 @@ def create_base_structure():
         "docs",
         "docs/api",
         "assets",
+        "tickets",
         ".github",
         ".github/workflows",
         ".github/ISSUE_TEMPLATE",
@@ -311,20 +312,73 @@ Purpose: Explain where every file lives in the project repository.
 """)
     print("✓ Created docs/DIRECTORY_STRUCTURE.md")
 
-    # Create first ticket
-    ticket_dir = "tickets"
-    os.makedirs(ticket_dir, exist_ok=True)
-    with open(f"{ticket_dir}/{args.ticket}_project_initialization.md", "w") as f:
-        f.write(f"""# {args.ticket} – Project Initialization
+    # Create major features tracking document
+    with open("docs/MAJOR_FEATURES.md", "w") as f:
+        f.write(f"""# Major Features Tracking – {args.name}
 
-## Title
-Project Initialization
+This document tracks the implementation progress of major features for the MVP (Minimum Viable Product) and beyond.
 
-## Type
-Maintenance
+## 🚀 MVP Features
 
-## Priority
-High
+### Core Application Setup
+- [ ] Initial project structure ({args.flavor} flavor)
+- [ ] Configuration management
+- [ ] Deployment pipeline
+
+### Application Features
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+
+## 🛠 Development Guidelines
+
+1. **Ticket Integration**:
+   - Every feature must have a corresponding ticket (e.g., {args.ticket.split('-')[0]}-XXX).
+   - Link the ticket number in parentheses next to each feature.
+   - Update this document when major tickets are created.
+
+2. **Progress Tracking**:
+   - Mark completed features with [x] instead of [ ].
+   - For partial progress, note percentage: [ ] Feature (75%).
+
+*Made with pride by {args.author} – {YEAR}*
+""")
+    print("✓ Created docs/MAJOR_FEATURES.md")
+
+    # Create first ticket from template
+    if os.path.exists("tickets/TEMPLATE.md"):
+        with open("tickets/TEMPLATE.md", "r") as template_file:
+            template_content = template_file.read()
+            
+        # Customize the template for this project
+        ticket_content = (template_content
+            .replace("MP-XXX", args.ticket)
+            .replace("Ticket Title Here", "Project Initialization")
+            .replace("Concise ticket title here", "Project Initialization")
+            .replace("Feature | Bug Fix | Enhancement | Maintenance | Documentation | Security | Chore", "Maintenance")
+            .replace("High | Medium | Low", "High")
+            .replace("Clear, concise explanation", f"Initialize the project structure using Manhattan Project template with {args.flavor} flavor")
+            .replace("1. Top-level task\n2. Another task\n   - Subtask A\n   - Subtask B\n3. …", 
+                     "1. Set up base directory structure\n2. Apply {args.flavor} flavor configuration\n3. Create initial documentation\n4. Set up CI/CD configuration")
+            .replace("- Technical approach\n- Design or architectural notes\n- Libraries / APIs\n- Performance or security considerations",
+                     f"- Using init_project.py script\n- Framework: {args.flavor.upper()}\n- Following Manhattan Project best practices")
+            .replace("- What success looks like\n- Acceptance criteria / KPI / metric",
+                     "- Working project structure\n- Documentation in place\n- Initial dependencies configured")
+            .replace("- Docs / RFCs / screenshots\n- Sample data / test cases\n- Related code links",
+                     f"- Manhattan Project template\n- {args.flavor.capitalize()} documentation")
+            .replace("- How to QA or test\n- Edge cases\n- Definition of Done",
+                     "- Project structure matches template\n- Basic application runs without errors\n- Documentation is accurate and complete")
+            .replace("- MP-YYY – Parent epic\n- SS-ZZZ – Cross-repo dependency", "- None")
+            .replace("PixelMyNixel", args.author)
+        )
+        
+        with open(f"tickets/{args.ticket}_project_initialization.md", "w") as f:
+            f.write(ticket_content)
+        print(f"✓ Created first ticket: {args.ticket}_project_initialization.md")
+    else:
+        # If template doesn't exist, create a simpler ticket file
+        with open(f"tickets/{args.ticket}_project_initialization.md", "w") as f:
+            f.write(f"""# {args.ticket} – Project Initialization
 
 ## Description
 Initialize the project structure using Manhattan Project template with {args.flavor} flavor.
@@ -335,31 +389,9 @@ Initialize the project structure using Manhattan Project template with {args.fla
 3. Create initial documentation
 4. Set up CI/CD configuration
 
-## Implementation Details
-- Using init_project.py script
-- Framework: {args.flavor.upper()}
-- Following Manhattan Project best practices
-
-## Expected Results
-- Working project structure
-- Documentation in place
-- Initial dependencies configured
-
-## Resources
-- Manhattan Project template
-- {args.flavor.capitalize()} documentation
-
-## Validation
-- Project structure matches template
-- Basic application runs without errors
-- Documentation is accurate and complete
-
-## Related Tickets
-- None
-
 *Made with pride by {args.author} – {YEAR}*
 """)
-    print(f"✓ Created first ticket: {args.ticket}_project_initialization.md")
+        print(f"✓ Created first ticket: {args.ticket}_project_initialization.md")
 
 def main():
     """Main function to orchestrate the initialization process."""
@@ -387,6 +419,12 @@ def main():
     print("2. Customize documentation as needed")
     print("3. Start building your application")
     print(f"4. Track progress in ticket {args.ticket}")
+    
+    # Clean up templates directory if not needed
+    if input("\nWould you like to remove the templates directory? (y/n): ").lower() == 'y':
+        if os.path.exists("templates"):
+            shutil.rmtree("templates")
+            print("✓ Removed templates directory")
     
     return 0
 
