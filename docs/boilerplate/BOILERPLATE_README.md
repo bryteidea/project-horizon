@@ -1,6 +1,6 @@
-# Boilerplate Templates – PixelMyNixel
+# Boilerplate Templates – Bryte Idea
 
-Goal: Provide drop‑in markdown (and text) templates so every repo across the PixelMyNixel org shares the same look‑and‑feel.
+Goal: Provide drop‑in markdown (and text) templates so every repo across the Bryte Idea org shares the same look‑and‑feel.
 
 ## 📦 Template Index
 
@@ -65,4 +65,4 @@ Edit the "Unreleased" section; bump version per SemVer.
 - Submit a PR to docs/boilerplate/ with clear before/after diff.
 - One maintainer approval + CI pass required to merge.
 
-Made with pride by PixelMyNixel – 2025 
+Made with pride by Bryte Idea – 2025 

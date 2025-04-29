@@ -20,4 +20,4 @@ Centralizing DIRECTORY_PURPOSE-related files helps with:
 When adding new DIRECTORY_PURPOSE files, please place them in the appropriate subdirectory
 based on their purpose.
 
-Made with love by BitGeek Software 
+Made with love by PixelMyNixel 

@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 """
-Manhattan Project Initializer
+Project Horizon Initializer
 
-This script sets up a new project based on the Manhattan Project template.
+This script sets up a new project based on the Project Horizon template.
 It allows selection of different project "flavors" (Flask, FastAPI, Django, CLI).
 
 Usage:
-    python scripts/init_project.py --name "My Project Name" --author "Your Name" --ticket MP-001 [--flavor flask]
+    python scripts/init_project.py --name "My Project Name" --author "Your Name" --ticket PH-001 [--flavor flask]
 
-Arguments:
+Options:
     --name      Project name
     --author    Project author/org name
-    --ticket    Initial ticket ID (e.g. MP-001)
-    --flavor    Project flavor (flask|fastapi|django|cli) [default: flask]
+    --ticket    Initial ticket ID (e.g. PH-001)
+    --flavor    [flask|fastapi|django|cli] (default: flask)
 """
 
 import argparse
@@ -27,13 +27,16 @@ YEAR = datetime.now().year
 
 def parse_args():
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description="Initialize Manhattan Project")
+    parser = argparse.ArgumentParser(description="Initialize Project Horizon")
     parser.add_argument("--name", required=True, help="Project name")
     parser.add_argument("--author", required=True, help="Project author/org name")
-    parser.add_argument("--ticket", required=True, help="Initial ticket ID (e.g. MP-001)")
-    parser.add_argument("--flavor", default="flask", choices=FLAVORS, 
-                        help=f"Project flavor: {', '.join(FLAVORS)}")
-    
+    parser.add_argument("--ticket", required=True, help="Initial ticket ID (e.g. PH-001)")
+    parser.add_argument(
+        "--flavor",
+        choices=["flask", "fastapi", "django", "cli"],
+        default="flask",
+        help="Project flavor (framework)",
+    )
     return parser.parse_args()
 
 def create_base_structure():
@@ -197,7 +200,7 @@ def create_project_docs(args):
     # Create README.md
     with open("README.md", "w") as f:
         f.write(f"""# {args.name}
-*A PixelMyNixel Project – v0.1.0*
+*A Bryte Idea Project – v0.1.0*
 
 > **Flavor:** {args.flavor.upper()}
 
@@ -357,15 +360,15 @@ This document tracks the implementation progress of major features for the MVP (
             .replace("Concise ticket title here", "Project Initialization")
             .replace("Feature | Bug Fix | Enhancement | Maintenance | Documentation | Security | Chore", "Maintenance")
             .replace("High | Medium | Low", "High")
-            .replace("Clear, concise explanation", f"Initialize the project structure using Manhattan Project template with {args.flavor} flavor")
+            .replace("Clear, concise explanation", f"Initialize the project structure using Project Horizon template with {args.flavor} flavor")
             .replace("1. Top-level task\n2. Another task\n   - Subtask A\n   - Subtask B\n3. …", 
                      "1. Set up base directory structure\n2. Apply {args.flavor} flavor configuration\n3. Create initial documentation\n4. Set up CI/CD configuration")
             .replace("- Technical approach\n- Design or architectural notes\n- Libraries / APIs\n- Performance or security considerations",
-                     f"- Using init_project.py script\n- Framework: {args.flavor.upper()}\n- Following Manhattan Project best practices")
+                     f"- Using init_project.py script\n- Framework: {args.flavor.upper()}\n- Following Project Horizon best practices")
             .replace("- What success looks like\n- Acceptance criteria / KPI / metric",
                      "- Working project structure\n- Documentation in place\n- Initial dependencies configured")
             .replace("- Docs / RFCs / screenshots\n- Sample data / test cases\n- Related code links",
-                     f"- Manhattan Project template\n- {args.flavor.capitalize()} documentation")
+                     f"- Project Horizon template\n- {args.flavor.capitalize()} documentation")
             .replace("- How to QA or test\n- Edge cases\n- Definition of Done",
                      "- Project structure matches template\n- Basic application runs without errors\n- Documentation is accurate and complete")
             .replace("- MP-YYY – Parent epic\n- SS-ZZZ – Cross-repo dependency", "- None")
@@ -381,7 +384,7 @@ This document tracks the implementation progress of major features for the MVP (
             f.write(f"""# {args.ticket} – Project Initialization
 
 ## Description
-Initialize the project structure using Manhattan Project template with {args.flavor} flavor.
+Initialize the project structure using Project Horizon template with {args.flavor} flavor.
 
 ## Tasks
 1. Set up base directory structure
@@ -401,7 +404,7 @@ def main():
     
     # Check if we're running in the correct directory
     if not os.path.exists("scripts") or not os.path.exists("docs"):
-        print("❌ Error: Please run this script from the root of the Manhattan Project template.")
+        print("❌ Error: Please run this script from the root of the Project Horizon template.")
         sys.exit(1)
     
     # Create the base structure (shared across all flavors)

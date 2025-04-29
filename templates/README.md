@@ -1,6 +1,6 @@
-# Manhattan Project Flavor Templates
+# Project Horizon Flavor Templates
 
-This directory contains the templates for different "flavors" of the Manhattan Project structure. Each flavor represents a different framework/architecture choice.
+This directory contains the templates for different "flavors" of the Project Horizon structure. Each flavor represents a different framework/architecture choice.
 
 ## Available Flavors
 
@@ -19,7 +19,7 @@ When initializing a new project, specify the desired flavor:
 python scripts/init_project.py \
        --name "My Project" \
        --author "Your Name" \
-       --ticket MP-001 \
+       --ticket PH-001 \
        --flavor fastapi  # Choose one of: flask, fastapi, django, cli
 ```
 
@@ -55,4 +55,4 @@ To add a new flavor:
 3. Update the init_project.py script to include the new flavor
 4. Add template files for the flavor-specific structure
 
-*Made with pride by PixelMyNixel – 2025* 
+*Made with pride by Bryte Idea – 2025* 

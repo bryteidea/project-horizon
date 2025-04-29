@@ -103,4 +103,4 @@ INSERT INTO users SELECT * FROM users_backup;
 All ad-hoc test scripts must have a ticket# appended to it, and the ticket must be created and stored in the tickets folder.
 Example: `AV-175_improved_verification_guide.py`
 
-Made with love by BitGeek Software 
+Made with love by PixelMyNixel 

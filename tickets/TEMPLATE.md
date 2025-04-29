@@ -1,47 +1,56 @@
-# MP-XXX – Ticket Title Here
-<!-- Replace MP with SS for ShelfSnap, PX for PixelMyNixel website, etc. -->
+# MP-XXX – Ticket Title Here 🎫
+<!-- Replace MP with SS for ShelfSnap, PX for Bryte Idea website, etc. -->
+
+> 🤖 *Beep boop! I'm your friendly ticket helper bot!*
 
 ## Title
 Concise ticket title here
 
-## Type
+## Type 🏷️
 Feature | Bug Fix | Enhancement | Maintenance | Documentation | Security | Chore
 
-## Priority
+## Priority ⚡
 High | Medium | Low   <!-- or use P1/P2/P3, or MoSCoW Must/Should/Could -->
 
-## Description
+## Description 📝
+<!-- 🤖 *Boop! Help me understand what we're building!* -->
 Clear, concise explanation of the issue or feature. Why it matters, context, impact.
 
-## Tasks
+## Tasks ✅
+<!-- 🤖 *Beep beep! I love organized task lists!* -->
 1. Top-level task
 2. Another task
    - Subtask A
    - Subtask B
 3. …
 
-## Implementation Details
+## Implementation Details 🛠️
+<!-- 🤖 *Boop! Technical details help my circuits understand how to help!* -->
 - Technical approach
 - Design or architectural notes
 - Libraries / APIs
 - Performance or security considerations
 
-## Expected Results
+## Expected Results 🎯
+<!-- 🤖 *Beep! What does success look like?* -->
 - What success looks like
 - Acceptance criteria / KPI / metric
 
-## Resources
+## Resources 📚
+<!-- 🤖 *Boop boop! I can help find these resources!* -->
 - Docs / RFCs / screenshots
 - Sample data / test cases
 - Related code links
 
-## Validation
+## Validation ✓
+<!-- 🤖 *Beep! Testing is important for my robot friends!* -->
 - How to QA or test
 - Edge cases
 - Definition of Done
 
-## Related Tickets
+## Related Tickets 🔗
+<!-- 🤖 *Beep! I can help track relationships between tickets!* -->
 - MP-YYY – Parent epic
 - SS-ZZZ – Cross-repo dependency
 
-*Made with pride by PixelMyNixel – 2025* 
+*Made with pride by Bryte Idea – 2025* 🤖 

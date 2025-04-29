@@ -1,5 +1,5 @@
 # Manhattan Project  
-*A PixelMyNixel Open‑Source Template – v0.1.0*
+*A Bryte Idea Open‑Source Template – v0.1.0*
 
 > **Tagline:** *Clone → configure → ship.*  An AI‑accelerated full‑stack starter that sets sane defaults for Python back‑end, optional React/Expo front‑end, CI, docs, security, and an adhoc workflow for ticket‑scoped scripts.
 
@@ -11,12 +11,12 @@
 | **🤝 Contributing** | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | **🎫 Issue Templates** | `.github/ISSUE_TEMPLATE/` |
 | **📜 Changelog** | [`CHANGELOG.md`](CHANGELOG.md) |
-| **🌐 Org Home** | <https://github.com/pixelmynixel> – other projects & roadmap |
-| **Landing Site** (WIP) | <https://pixelmynixel.com> |
+| **🌐 Org Home** | <https://github.com/bryte-idea> – other projects & roadmap |
+| **Landing Site** (WIP) | <https://byteidea.com> |
 
 ---
 ## 💡 Why Manhattan Project?
-PixelMyNixel builds nostalgic media tools (e.g. **ShelfSnap** – physical‑media collector app). We needed a **repeatable, AI‑friendly scaffold**.  Now you can:
+Bryte Idea builds nostalgic media tools (e.g. **ShelfSnap** – physical‑media collector app). We needed a **repeatable, AI‑friendly scaffold**.  Now you can:
 
 * Clone / use template in seconds.
 * Let Cursor, Copilot, or ChatGPT refactor with consistent style.
@@ -116,6 +116,6 @@ For vulnerabilities, see [`SECURITY.md`](SECURITY.md).
 
 ---
 ## 📜 License
-MIT © PixelMyNixel 2025.  See [`LICENSE`](LICENSE).
+MIT © Bryte Idea 2025.  See [`LICENSE`](LICENSE).
 
 *Happy coding & may your pixels be ever nixel‑perfect!*

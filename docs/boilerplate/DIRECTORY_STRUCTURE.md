@@ -35,14 +35,12 @@ manhattan-project/
 | static/ | Images, JS, CSS for Flask views | Optional; omit if you're API‑only. |
 | tests/ | Unit + integration tests | Mirror app/ structure; use fixtures in tests/conftest.py. |
 | docker/ | Containerization resources | Keep minimal for dev/prod parity. |
-| .github/ | CI, templates | Inherited org‑wide docs live in pixelmynixel/.github. |
+| .github/ | CI, templates | Inherited org‑wide docs live in bryte-idea/.github. |
 
 ## Adhoc Workflow (Scratch → Archive)
 
 1. Generate script via Cursor
-   ```
    cursor ask "Create a Python script that bulk‑renames images based on EXIF, ticket MP-456" --output adhoc/MP-456_bulk_exif_renamer.py
-   ```
 
 2. Iterate & test inside adhoc/ until it's production‑ready or obsolete.
 
@@ -68,4 +66,4 @@ manhattan-project/
 3. Add a README.md in the new dir explaining its purpose.
 4. Update this document.
 
-*Made with love by PixelMyNixel – 2025* 
+*Made with love by Bryte Idea – 2025* 

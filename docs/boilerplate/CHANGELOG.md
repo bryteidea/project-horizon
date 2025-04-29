@@ -44,4 +44,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Threats mitigated
   - Recommended actions for users
 
-Made with love by BitGeek Software 
+Made with love by PixelMyNixel 

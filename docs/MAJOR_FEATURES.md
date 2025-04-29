@@ -1,4 +1,4 @@
-# Major Features Tracking – Manhattan Project
+# Major Features Tracking – Project Horizon
 
 This document tracks the implementation progress of major features for the MVP (Minimum Viable Product) and beyond.
 
@@ -49,7 +49,7 @@ This document tracks the implementation progress of major features for the MVP (
 ## 🛠 Development Guidelines
 
 1. **Ticket Integration**:
-   - Every feature must have a corresponding ticket (e.g., MP-XXX).
+   - Every feature must have a corresponding ticket (e.g., PH-XXX).
    - Link the ticket number in parentheses next to each feature.
    - Update this document when major tickets are created.
 
@@ -63,7 +63,7 @@ This document tracks the implementation progress of major features for the MVP (
    - If priorities shift, document the changes through tickets.
 
 4. **Naming Conventions**:
-   - Adhoc scripts must reference ticket numbers in filename: MP-123_my_script_description.py.
+   - Adhoc scripts must reference ticket numbers in filename: PH-123_my_script_description.py.
    - Ticket naming and feature names must remain consistent for traceability.
 
-*Made with pride by PixelMyNixel – 2025* 
+*Made with pride by Bryte Idea – 2025* 
