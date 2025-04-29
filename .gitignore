@@ -20,5 +20,6 @@ env/
 *.db
 *.sqlite3
 
-# Private development scripts
-adhoc/
+# Private development scripts (keep folder, ignore contents)
+adhoc/*
+!adhoc/README.md
