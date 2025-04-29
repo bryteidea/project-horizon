@@ -19,3 +19,6 @@ env/
 # Database
 *.db
 *.sqlite3
+
+# Private development scripts
+adhoc/
